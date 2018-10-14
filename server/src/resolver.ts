@@ -5,7 +5,6 @@ import * as bcryptjs from 'bcryptjs';
 export const resolvers: IResolvers = {
   Query: {
     sessionUser: async (_, __, { req }) => {
-      console.log(req);
       const id = req.session.userId;
       if (!id) {
         return null;
